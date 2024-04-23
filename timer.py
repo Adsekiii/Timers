@@ -12,7 +12,6 @@ def timer():
         minutes,seconds = startTimer(minutes,seconds)
         time.sleep(1)
         
-    
 def startTimer(minutes : int, seconds : int):
     clearTerminal.clearTerminal()
     print("Time left: ", end="")
@@ -27,9 +26,7 @@ def startTimer(minutes : int, seconds : int):
             seconds -=1
         else:
             stopTimer()
-    return minutes, seconds
-            
-        
+    return minutes, seconds   
     
 def stopTimer():
     clearTerminal.clearTerminal()
