@@ -25,12 +25,9 @@ def startTimer(minutes : int, seconds : int):
         if seconds != 0:
             seconds -=1
         else:
-            stopTimer()
-    return minutes, seconds   
-    
-def stopTimer():
-    clearTerminal.clearTerminal()
+            clearTerminal.clearTerminal()
     print("Ring! Ring! Ring!")
+    return minutes, seconds   
 
 def checkTime(minutes, seconds):
     errorNum : int = 0

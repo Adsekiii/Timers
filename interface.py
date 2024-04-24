@@ -1,4 +1,4 @@
-import stopWatch
+import stopwatch
 import pomodoro
 import timer
 import clearTerminal
@@ -16,7 +16,7 @@ def chceckIfValid(choice) -> None:
     try:
         match choice:
             case '1':
-                stopWatch.stopWatch()
+                stopwatch.stopwatch()
             case '2':
                 timer.timer()
             case '3':
