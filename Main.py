@@ -1,7 +1,7 @@
 import interface
 
-def main():
+def main() -> None :
     interface.menu()
 
-if __name__ == '__main__':
+if __name__ == '__main__' :
     main()
