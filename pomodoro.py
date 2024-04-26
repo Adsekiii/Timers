@@ -2,6 +2,8 @@ import time
 import clearTerminal
 import keyboard
 
+# TODO global variables are not good in python, code need a rewrite to account for that
+
 workPhase : int = 30
 shortBreak : int = 5
 longBreak : int = 15
@@ -16,6 +18,7 @@ def pomodoro() -> None :
     print("Access options! -> <O>")
     match keyboard.read_key():     #after pressing F start pomodoro
         case 'f':
+            # TODO this pice of code need a desperate rewrite with less if statements
             sec : int = workPhase * 60
             while True:
                 if isItWorkingTime == True:
@@ -55,6 +58,7 @@ def startPomodoro(sec) -> int : #print current time, check if seconds are equal 
         keyboard.read_key()
     return sec
 
+# TODO short and long break are identical so they should be refactored into singular function eventually
 def startShortBreak(sec) -> int :
     global isItWorkingTime
     clearTerminal.clearTerminal()
@@ -82,7 +86,7 @@ def startLongBreak(sec) -> int :
         isItWorkingTime = True
         keyboard.read_key()
     return sec
-
+# TODO cases are similar so maybe add a separate function for it?
 def options() -> None :
     global workPhase
     global longBreak
