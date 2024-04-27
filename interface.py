@@ -19,11 +19,12 @@ def chceckIfValid(choice) -> None :
         case '2':
             timer.timer()           #user chosen timer
         case '3':
-            pomodoro.pomodoro()     #user chosen pomodoro
+            pomodoro.pomodoroSetup()     #user chosen pomodoro
         case _:
             clearTerminal.clearTerminal()
             print("There is no such value") #user chosen option other than expected
             menu()
+    menu()
     
     
         
