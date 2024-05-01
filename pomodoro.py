@@ -7,9 +7,9 @@ import clearTerminal
 # TODO after stop add display amount of cycles that user lasted as well as overall time worked and rested
 
 def pomodoroSetup() -> None :
-    workingTime : str = "10:10"
-    shortBreakTime : str = "0:02"
-    longBreakTime : str = "0:10"
+    workingTime : str = "30:00"
+    shortBreakTime : str = "5:00"
+    longBreakTime : str = "15:00"
     working : bool = True
     cycles : int = 0
     
@@ -59,13 +59,13 @@ def timeSettings(workingTime,shortBreakTime,longBreakTime) -> tuple[str,str,str]
 def pomodoro(workingTime : str, shortBreakTime : str, longBreakTime : str, working : bool , cycles : int) -> None:
     while True:
         # TODO write a function for time assignment for 'seconds' variable
-        if cycles % 3 is 0 and working is False:
+        if cycles % 3 == 0 and working is False:
             seconds : int = int(longBreakTime[:longBreakTime.find(":")])*60 + int(longBreakTime[longBreakTime.find(":")+1:])
             print("Long break time!")
             time.sleep(2)
             countdown(seconds) 
             working = not working 
-        elif cycles % 3 is not 0 and working is False:
+        elif cycles % 3 != 0 and working is False:
             seconds : int  = int(shortBreakTime[:shortBreakTime.find(":")])*60 + int(shortBreakTime[shortBreakTime.find(":")+1:])
             print("Short break time!")
             time.sleep(2)
